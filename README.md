@@ -16,6 +16,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## FFmpeg (server conversion)
+
+The API route at `/api/convert` uses FFmpeg on the server.
+
+- Recommended: the project includes `@ffmpeg-installer/ffmpeg`, which bundles an FFmpeg binary (works well on Windows).
+- Alternative: install FFmpeg system-wide and ensure `ffmpeg` is available on PATH, or set `FFMPEG_PATH` to the full path of your `ffmpeg` executable.
+
+If you use `pnpm` and see warnings about **ignored build scripts**, FFmpeg packages that download binaries during install (like `ffmpeg-static`) may not work until you allow scripts via `pnpm approve-builds`.
+
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

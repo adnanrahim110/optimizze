@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-canvas-white: #ffffff;
+  --color-canvas-black: #000000;
+  --color-canvas-gray: #f4f4f5;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-negan: var(--font-negan);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-accent-50: #eff4ff;
+  --color-accent-100: #dbeafe;
+  --color-accent-200: #bfdbfe;
+  --color-accent-300: #93c5fd;
+  --color-accent-400: #60a5fa;
+  --color-accent-500: #3b82f6;
+  --color-accent-600: #0055ff;
+  --color-accent-700: #0044cc;
+  --color-accent-800: #003399;
+  --color-accent-900: #002266;
+  --color-accent-950: #001133;
+
+  --color-accent: var(--accent-600);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-canvas-white text-canvas-black min-h-screen font-sans;
+  }
+
+  .textured-canvas {
+    --cursor-x: 50%;
+    --cursor-y: 50%;
+    background-color: #fdfcf8;
+    background-image:
+      radial-gradient(600px circle at var(--cursor-x) var(--cursor-y), rgba(0, 0, 0, 0.06), transparent 60%),
+      repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.025) 0px, rgba(0, 0, 0, 0.025) 1px, transparent 1px, transparent 6px),
+      repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0px, rgba(0, 0, 0, 0.02) 1px, transparent 1px, transparent 7px),
+      radial-gradient(rgba(0, 0, 0, 0.025) 0.5px, transparent 0.5px);
+    background-size: auto, auto, auto, 6px 6px;
+  }
+
+  .swiss-border {
+    @apply border-2 border-black;
+  }
+
+  .swiss-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .swiss-shadow-sm {
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .swiss-hover {
+    @apply transition-transform active:translate-x-0.5 active:translate-y-0.5 active:shadow-none;
+  }
+
+  .text-title-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-accent-800 to-accent-500;
+  }
+
+  .text-title-gradient-dark {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-accent-800 to-accent-500;
+  }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border: 3px solid #ffffff;
+    box-shadow: inset 0 0 0 1px #000000;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+  }
 }

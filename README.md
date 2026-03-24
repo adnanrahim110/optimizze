@@ -28,12 +28,12 @@ It supports batch uploads via the UI, per-file output format selection, a qualit
 
 Optimizze uses a **hybrid conversion pipeline**:
 
-1) **Client-side (browser) conversion** for most images
+1. **Client-side (browser) conversion** for most images
 
 - Uses `@ffmpeg/ffmpeg` (WebAssembly) with the multi-threaded core.
 - Requires `SharedArrayBuffer`, which is enabled via `Cross-Origin-Opener-Policy` and `Cross-Origin-Embedder-Policy` headers (configured in `next.config.mjs`).
 
-2) **Server-side conversion** for:
+2. **Server-side conversion** for:
 
 - All videos
 - AVIF input or output (due to browser FFmpeg WASM limitations)
@@ -74,10 +74,10 @@ Then open:
 
 ## Usage
 
-1) Open the app and upload one or more files (drag & drop or click).
-2) For each file, choose output format and quality.
-3) Click **Start Processing**.
-4) Download each converted file, or use **Download All (ZIP)**.
+1. Open the app and upload one or more files (drag & drop or click).
+2. For each file, choose output format and quality.
+3. Click **Start Processing**.
+4. Download each converted file, or use **Download All (ZIP)**.
 
 ## API
 
@@ -89,10 +89,10 @@ Converts a single file using server-side FFmpeg.
 
 - Content-Type: `multipart/form-data`
 - Fields:
-	- `file` (required): the uploaded file
-	- `format` (required): output extension (e.g. `mp4`, `webm`, `webp`, `jpg`, `png`, `avif`)
-	- `quality` (optional): integer `10..100` (defaults to `80`)
-	- `type` (optional): `image` or `video` (defaults to `video` behavior if you pass a video)
+  - `file` (required): the uploaded file
+  - `format` (required): output extension (e.g. `mp4`, `webm`, `webp`, `jpg`, `png`, `avif`)
+  - `quality` (optional): integer `10..100` (defaults to `80`)
+  - `type` (optional): `image` or `video` (defaults to `video` behavior if you pass a video)
 
 **Response**
 
@@ -117,10 +117,10 @@ The server route needs an FFmpeg executable.
 
 Optimizze will try to locate FFmpeg in this order:
 
-1) `FFMPEG_PATH` (or `FFMPEG_BIN`) environment variable
-2) `ffmpeg-static` (if its binary exists)
-3) Bundled FFmpeg from `@ffmpeg-installer/ffmpeg` (works well on Windows + pnpm)
-4) System `ffmpeg` available on PATH
+1. `FFMPEG_PATH` (or `FFMPEG_BIN`) environment variable
+2. `ffmpeg-static` (if its binary exists)
+3. Bundled FFmpeg from `@ffmpeg-installer/ffmpeg` (works well on Windows + pnpm)
+4. System `ffmpeg` available on PATH
 
 **Recommended (cross-platform):** keep `@ffmpeg-installer/ffmpeg` installed (already in `dependencies`).
 

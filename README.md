@@ -291,3 +291,16 @@ Server conversion writes to the OS temp directory and processes files synchronou
 - Client-side WASM conversion works fully offline once loaded
 
 ---
+
+<div align="center">
+
+**Built with 🔥 by [Adnan Rahim](https://github.com/adnanrahim110)**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=firefox&logoColor=white)](https://adnanrahim.infinityfree.me)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/adnan-rahim-4b94a5240)
+
+</div>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24&height=100&section=footer&animation=fadeIn" />
+</div>

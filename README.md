@@ -33,14 +33,22 @@
 
 ---
 
-## Overview
+## 🧠 Overview
 
-**Primary goal:** convert uploaded media into web-friendly formats with controllable quality.
+**Optimizze** is a full-stack media conversion and optimization tool built with **Next.js**. It lets you upload images and videos in bulk, choose output formats per file, control quality with a slider, and download results individually or all at once as a ZIP.
 
-**Supported outputs** (current UI):
+Built for developers, designers, and content creators who need fast, controllable, web-friendly media output — without relying on third-party services.
 
-- Images: `webp`, `png`, `jpg`, `avif`
-- Videos: `mp4`, `webm`
+<div align="center">
+
+![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)
+![Type](https://img.shields.io/badge/Type-Open_Source_Tool-a78bfa?style=flat-square)
+![Conversion](https://img.shields.io/badge/Conversion-Client_%2B_Server_Side-3b82f6?style=flat-square)
+![Engine](https://img.shields.io/badge/Engine-FFmpeg_WASM_%2B_fluent--ffmpeg-f59e0b?style=flat-square)
+
+</div>
+
+---
 
 ## Architecture
 

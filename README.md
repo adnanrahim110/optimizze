@@ -93,6 +93,24 @@ Optimizze uses a **hybrid conversion pipeline** designed for speed and compatibi
 > **Why hybrid?** Browser FFmpeg WASM has limitations with AVIF and video codecs. Server-side FFmpeg handles these edge cases reliably while keeping image conversion fast and offline-capable.
 
 ---
+
+## 🎞️ Supported Formats
+
+### 🖼️ Images
+| Format | Input | Output | Engine |
+|---|---|---|---|
+| `webp` | ✅ | ✅ | Client (WASM) |
+| `png` | ✅ | ✅ | Client (WASM) |
+| `jpg` / `jpeg` | ✅ | ✅ | Client (WASM) |
+| `avif` | ✅ | ✅ | Server (FFmpeg) |
+
+### 🎬 Videos
+| Format | Input | Output | Engine |
+|---|---|---|---|
+| `mp4` | ✅ | ✅ | Server (FFmpeg) |
+| `webm` | ✅ | ✅ | Server (FFmpeg) |
+
+---
 ## Requirements
 
 - Node.js: Next.js 16 requires Node `>= 20.9.0`

@@ -111,12 +111,17 @@ Optimizze uses a **hybrid conversion pipeline** designed for speed and compatibi
 | `webm` | ✅ | ✅ | Server (FFmpeg) |
 
 ---
-## Requirements
 
-- Node.js: Next.js 16 requires Node `>= 20.9.0`
-- Package manager: `pnpm` is recommended (repo includes `pnpm-lock.yaml`)
+## 📋 Requirements
 
-For server conversions (video/AVIF), you also need a working FFmpeg binary (see **Configuration → FFmpeg**).
+| Requirement | Version |
+|---|---|
+| **Node.js** | >= 20.9.0 |
+| **Package Manager** | `pnpm` (recommended) |
+| **FFmpeg Binary** | Required for video/AVIF conversion |
+| **Browser** | Chrome/Edge (for SharedArrayBuffer support) |
+
+> **Note:** For server conversions (video/AVIF), a working FFmpeg binary is required. See [Configuration](#-configuration) for setup options.
 
 ## Setup & run
 

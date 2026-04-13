@@ -160,12 +160,17 @@ http://localhost:3000
 
 ---
 
-## Usage
+## 📖 Usage
 
-1. Open the app and upload one or more files (drag & drop or click).
-2. For each file, choose output format and quality.
-3. Click **Start Processing**.
-4. Download each converted file, or use **Download All (ZIP)**.
+```
+1. Open the app at http://localhost:3000
+2. Upload one or more files (drag & drop or click to browse)
+3. For each file, select the output format and adjust quality
+4. Click "Start Processing"
+5. Download files individually, or click "Download All" for a ZIP
+```
+
+---
 
 ## API
 

@@ -1,5 +1,5 @@
-<div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/trinib/trinib/a5f17399d881c5651a89bfe4a621014b08346cf0/images/footer.svg" style="transform: scaleY(-1)" />
+<div align="center" style="transform: scaleY(-1)">
+  <img width="100%" src="https://raw.githubusercontent.com/trinib/trinib/a5f17399d881c5651a89bfe4a621014b08346cf0/images/footer.svg" />
 </div>
 
 <div align="center">

@@ -248,31 +248,42 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ---
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
-### “FFmpeg binary not found” / `/api/convert` returns 500
+<details>
+<summary><strong>❌ "FFmpeg binary not found" / /api/convert returns 500</strong></summary>
 
 - Ensure `@ffmpeg-installer/ffmpeg` is installed: `pnpm install`
-- Or set `FFMPEG_PATH` to a valid `ffmpeg` executable path
-- Or install FFmpeg and verify `ffmpeg -version` works in your terminal
+- Or set `FFMPEG_PATH` to a valid ffmpeg executable path
+- Or install FFmpeg system-wide and verify: `ffmpeg -version`
 
-### pnpm warns: “Ignored build scripts”
+</details>
 
-Some dependencies download binaries during install (for example `ffmpeg-static`). If pnpm blocks scripts, those binaries may be missing.
+<details>
+<summary><strong>⚠️ pnpm warns: "Ignored build scripts"</strong></summary>
 
-- If you want `ffmpeg-static` to work, run: `pnpm approve-builds` (then reinstall/rebuild)
-- Otherwise, rely on `@ffmpeg-installer/ffmpeg` or a system FFmpeg install
+Some dependencies download binaries during install (e.g. `ffmpeg-static`). If pnpm blocks scripts, those binaries may be missing.
 
-### Browser shows: “SharedArrayBuffer is not supported”
+To fix: run `pnpm approve-builds` then reinstall. Otherwise, rely on `@ffmpeg-installer/ffmpeg` or a system FFmpeg install.
 
-- Confirm you’re running the app with the headers enabled (see `next.config.mjs`).
-- Use Chrome/Edge on a secure context (localhost is OK for dev).
+</details>
 
-### Large files / timeouts
+<details>
+<summary><strong>🌐 Browser shows: "SharedArrayBuffer is not supported"</strong></summary>
 
-Server conversion writes to the OS temp directory and processes files synchronously per request.
+- Confirm you're running the app with headers enabled (check `next.config.mjs`)
+- Use Chrome or Edge on a secure context (`localhost` is fine for dev)
 
-- For very large videos, prefer running locally or increasing server limits/timeouts in your deployment environment.
+</details>
+
+<details>
+<summary><strong>⏱️ Large files / timeouts</strong></summary>
+
+Server conversion writes to the OS temp directory and processes files synchronously per request. For very large videos, prefer running locally or increasing server limits/timeouts in your deployment environment.
+
+</details>
+
+---
 
 ## Notes
 

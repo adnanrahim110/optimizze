@@ -18,16 +18,20 @@
 
 ---
 
-## Table of contents
+## 📌 Table of Contents
 
-- Overview
-- Architecture
-- Requirements
-- Setup & run
-- Usage
-- API
-- Configuration
-- Troubleshooting
+- [Overview](#-overview)
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Supported Formats](#-supported-formats)
+- [Requirements](#-requirements)
+- [Setup & Run](#-setup--run)
+- [Usage](#-usage)
+- [API Reference](#-api-reference)
+- [Configuration](#-configuration)
+- [Troubleshooting](#-troubleshooting)
+
+---
 
 ## Overview
 

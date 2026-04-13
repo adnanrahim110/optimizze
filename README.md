@@ -209,31 +209,44 @@ curl -X POST http://localhost:3000/api/convert \
 ```
 
 ---
-## Configuration
 
-### FFmpeg (server conversion)
+## ⚙️ Configuration
 
-The server route needs an FFmpeg executable.
+### FFmpeg Binary (Server Conversion)
 
-Optimizze will try to locate FFmpeg in this order:
+Optimizze resolves the FFmpeg binary in this priority order:
 
-1. `FFMPEG_PATH` (or `FFMPEG_BIN`) environment variable
-2. `ffmpeg-static` (if its binary exists)
-3. Bundled FFmpeg from `@ffmpeg-installer/ffmpeg` (works well on Windows + pnpm)
-4. System `ffmpeg` available on PATH
+```
+1. FFMPEG_PATH or FFMPEG_BIN environment variable
+2. ffmpeg-static (if binary exists)
+3. @ffmpeg-installer/ffmpeg (recommended — works cross-platform)
+4. System ffmpeg available on PATH
+```
 
-**Recommended (cross-platform):** keep `@ffmpeg-installer/ffmpeg` installed (already in `dependencies`).
+**Recommended setup (cross-platform):**
 
-**Alternative:** install FFmpeg system-wide and ensure `ffmpeg` is on PATH.
+Keep `@ffmpeg-installer/ffmpeg` installed — it's already in the dependencies and works well on Windows + pnpm.
 
-### Cross-origin isolation (client FFmpeg WASM)
+**Alternative:**
 
-The browser FFmpeg engine uses the multi-threaded core, which requires `SharedArrayBuffer`.
+Install FFmpeg system-wide and verify it works:
 
-This repo enables the required headers for all routes in `next.config.mjs`:
+```bash
+ffmpeg -version
+```
 
-- `Cross-Origin-Opener-Policy: same-origin`
-- `Cross-Origin-Embedder-Policy: require-corp`
+### Cross-Origin Isolation (Client WASM)
+
+The browser FFmpeg engine requires `SharedArrayBuffer`, which needs these headers enabled. They're already configured in `next.config.mjs`:
+
+```js
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
+
+> These headers are applied globally to all routes automatically.
+
+---
 
 ## Troubleshooting
 

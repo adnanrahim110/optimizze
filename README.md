@@ -63,22 +63,36 @@ Built for developers, designers, and content creators who need fast, controllabl
 | 🔒 **Cross-Origin Isolated** | SharedArrayBuffer enabled via COOP/COEP headers for multi-threaded WASM |
 
 ---
-## Architecture
 
-Optimizze uses a **hybrid conversion pipeline**:
+## 🏗️ Architecture
 
-1. **Client-side (browser) conversion** for most images
+Optimizze uses a **hybrid conversion pipeline** designed for speed and compatibility:
 
-- Uses `@ffmpeg/ffmpeg` (WebAssembly) with the multi-threaded core.
-- Requires `SharedArrayBuffer`, which is enabled via `Cross-Origin-Opener-Policy` and `Cross-Origin-Embedder-Policy` headers (configured in `next.config.mjs`).
+```
+┌─────────────────────────────────────────────────┐
+│                   Browser (Client)               │
+│                                                  │
+│  Upload files ──► Format + Quality selection     │
+│                                                  │
+│  ┌─────────────────────────────────────────┐    │
+│  │  Images (non-AVIF)                      │    │
+│  │  FFmpeg WASM (@ffmpeg/ffmpeg)           │    │
+│  │  Multi-threaded via SharedArrayBuffer   │    │
+│  └─────────────────────────────────────────┘    │
+│                                                  │
+│  ┌─────────────────────────────────────────┐    │
+│  │  Videos + AVIF input/output             │    │
+│  │  POST /api/convert ──► Server FFmpeg    │    │
+│  │  fluent-ffmpeg + system/bundled binary  │    │
+│  └─────────────────────────────────────────┘    │
+│                                                  │
+│  Download individual files or ZIP bundle         │
+└─────────────────────────────────────────────────┘
+```
 
-2. **Server-side conversion** for:
+> **Why hybrid?** Browser FFmpeg WASM has limitations with AVIF and video codecs. Server-side FFmpeg handles these edge cases reliably while keeping image conversion fast and offline-capable.
 
-- All videos
-- AVIF input or output (due to browser FFmpeg WASM limitations)
-
-Server conversion is implemented in the `/api/convert` route using `fluent-ffmpeg`, which calls a system FFmpeg binary.
-
+---
 ## Requirements
 
 - Node.js: Next.js 16 requires Node `>= 20.9.0`

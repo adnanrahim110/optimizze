@@ -123,30 +123,42 @@ Optimizze uses a **hybrid conversion pipeline** designed for speed and compatibi
 
 > **Note:** For server conversions (video/AVIF), a working FFmpeg binary is required. See [Configuration](#-configuration) for setup options.
 
-## Setup & run
 
-Install dependencies:
+## 🚀 Setup & Run
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/adnanrahim110/optimizze.git
+cd optimizze
+```
+
+**2. Install dependencies**
 
 ```bash
 pnpm install
 ```
 
-Start the dev server:
+**3. Start the development server**
 
 ```bash
 pnpm dev
 ```
 
-Build for production:
+**4. Build for production**
 
 ```bash
 pnpm build
 pnpm start
 ```
 
-Then open:
+**5. Open in browser**
 
-- http://localhost:3000
+```
+http://localhost:3000
+```
+
+---
 
 ## Usage
 

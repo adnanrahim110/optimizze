@@ -1,8 +1,22 @@
-# Optimizze
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24&height=160&section=header&text=Optimizze&fontSize=52&fontColor=ffffff&fontAlignY=55&animation=fadeIn&desc=Media+Conversion+%26+Optimization+Tool&descSize=18&descAlignY=78&descColor=a78bfa" />
+</div>
 
-Optimizze is a Next.js-based media conversion and optimization tool for images and videos.
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&weight=600&size=20&center=true&vCenter=true&width=700&height=50&duration=3000&pause=800&color=A78BFA&lines=Convert+images+%26+videos+in+seconds+%E2%9A%A1;Batch+uploads+%2B+per-file+format+control;Client-side+WASM+%2B+server-side+FFmpeg;Built+with+Next.js+%F0%9F%9A%80" />
+</div>
 
-It supports batch uploads via the UI, per-file output format selection, a quality slider, individual downloads, and “download all” as a ZIP.
+<div align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=for-the-badge&logo=webassembly&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-a78bfa?style=for-the-badge)
+
+</div>
+
+---
 
 ## Table of contents
 

@@ -50,6 +50,19 @@ Built for developers, designers, and content creators who need fast, controllabl
 
 ---
 
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 🗂️ **Batch Uploads** | Upload multiple files at once via drag & drop or file picker |
+| 🎛️ **Per-file Format Control** | Choose output format independently for each file |
+| 📊 **Quality Slider** | Fine-tune output quality from 10 to 100 per file |
+| ⚡ **Client-side Conversion** | Images converted in the browser via FFmpeg WASM — no server round-trip |
+| 🖥️ **Server-side Conversion** | Videos and AVIF processed via fluent-ffmpeg on the server |
+| 📦 **Download All as ZIP** | Grab all converted files in one click |
+| 🔒 **Cross-Origin Isolated** | SharedArrayBuffer enabled via COOP/COEP headers for multi-threaded WASM |
+
+---
 ## Architecture
 
 Optimizze uses a **hybrid conversion pipeline**:

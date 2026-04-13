@@ -284,7 +284,10 @@ Server conversion writes to the OS temp directory and processes files synchronou
 </details>
 
 ---
+## 📝 Notes
 
-## Notes
+- Server-side FFmpeg is intended for **local/dev and self-hosted** deployments
+- If deploying to a **serverless environment**, ensure FFmpeg binaries are supported and available
+- Client-side WASM conversion works fully offline once loaded
 
-- The server-side FFmpeg approach is intended for local/dev and self-hosted deployments. If you deploy to a serverless environment, ensure FFmpeg binaries are supported and available.
+---

@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:4c1d95,100:7c3aed&height=160&section=header&text=Optimizze&fontSize=52&fontColor=ffffff&fontAlignY=55&animation=fadeIn&desc=Media+Conversion+%26+Optimization+Tool&descSize=18&descAlignY=78&descColor=a78bfa" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&height=100&lines=⚡+Optimizze" />
+  <br/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=18&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&height=40&lines=Media+Conversion+%26+Optimization+Tool" />
 </div>
 
 <div align="center">
@@ -302,5 +304,5 @@ Server conversion writes to the OS temp directory and processes files synchronou
 </div>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24&height=100&section=footer&animation=fadeIn" />
+  <img width="100%" src="https://raw.githubusercontent.com/trinib/trinib/a5f17399d881c5651a89bfe4a621014b08346cf0/images/footer.svg" />
 </div>

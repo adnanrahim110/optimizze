@@ -1,8 +1,4 @@
 <div align="center">
-<img width="100%" src="https://svg-banners.vercel.app/api?type=wave&text1=Optimizze&text2=Media%20Conversion%20%26%20Optimization%20Tool&width=1200&height=150&colorA=4c1d95&colorB=7c3aed" />
-</div>
-
-<div align="center">
   <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&weight=600&size=20&center=true&vCenter=true&width=700&height=50&duration=3000&pause=800&color=A78BFA&lines=Convert+images+%26+videos+in+seconds+%E2%9A%A1;Batch+uploads+%2B+per-file+format+control;Client-side+WASM+%2B+server-side+FFmpeg;Built+with+Next.js+%F0%9F%9A%80" />
 </div>
 

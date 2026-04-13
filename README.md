@@ -172,7 +172,7 @@ http://localhost:3000
 
 ---
 
-## API
+## 🔌 API Reference
 
 ### `POST /api/convert`
 
@@ -180,28 +180,35 @@ Converts a single file using server-side FFmpeg.
 
 **Request**
 
-- Content-Type: `multipart/form-data`
-- Fields:
-  - `file` (required): the uploaded file
-  - `format` (required): output extension (e.g. `mp4`, `webm`, `webp`, `jpg`, `png`, `avif`)
-  - `quality` (optional): integer `10..100` (defaults to `80`)
-  - `type` (optional): `image` or `video` (defaults to `video` behavior if you pass a video)
+```
+Content-Type: multipart/form-data
+```
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `file` | File | ✅ | The uploaded media file |
+| `format` | string | ✅ | Output extension: `mp4`, `webm`, `webp`, `jpg`, `png`, `avif` |
+| `quality` | integer | ❌ | Range: `10–100` — defaults to `80` |
+| `type` | string | ❌ | `image` or `video` — defaults to video behavior |
 
 **Response**
 
-- Success: binary response with `Content-Type` based on `format` and `Content-Disposition: attachment`
-- Error: JSON `{ "error": "..." }` with HTTP 4xx/5xx
+| Status | Response |
+|---|---|
+| ✅ Success | Binary file with `Content-Type` + `Content-Disposition: attachment` |
+| ❌ Error | JSON `{ "error": "..." }` with HTTP `4xx` / `5xx` |
 
 **Example (curl)**
 
 ```bash
 curl -X POST http://localhost:3000/api/convert \
-	-F "file=@./input.mp4" \
-	-F "format=webm" \
-	-F "quality=80" \
-	-o output.webm
+  -F "file=@./input.mp4" \
+  -F "format=webm" \
+  -F "quality=80" \
+  -o output.webm
 ```
 
+---
 ## Configuration
 
 ### FFmpeg (server conversion)

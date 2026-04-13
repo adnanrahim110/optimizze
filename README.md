@@ -1,5 +1,5 @@
-<div align="center" style="transform: scaleY(-1)">
-  <img width="100%" src="https://raw.githubusercontent.com/trinib/trinib/a5f17399d881c5651a89bfe4a621014b08346cf0/images/footer.svg" />
+<div align="center">
+<img width="100%" src="https://svg-banners.vercel.app/api?type=wave&text1=Optimizze&text2=Media%20Conversion%20%26%20Optimization%20Tool&width=1200&height=150&colorA=4c1d95&colorB=7c3aed" />
 </div>
 
 <div align="center">

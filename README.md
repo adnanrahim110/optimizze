@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&height=100&lines=⚡+Optimizze" />
-  <br/>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=18&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&height=40&lines=Media+Conversion+%26+Optimization+Tool" />
+<img width="100%" src="https://raw.githubusercontent.com/trinib/trinib/82213791fa9ff58d3ca768ddd6de2489ec23ffca/images/header.svg" />
 </div>
 
 <div align="center">
